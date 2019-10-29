@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/nutrient_launcher"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon"
+            android:text="R 2"
+            android:textSize="35dp"
+            android:textColor="#DA788B"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

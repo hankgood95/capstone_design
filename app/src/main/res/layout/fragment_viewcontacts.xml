@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+            <!--이부분은 한 레이아웃에 이걸 집어 넣는다는 얘기이다
+            같은 레이아웃에 있지만 서로 같은 공간을 쓴다 그래서 버튼을 통해서 화면을 바꿈 -->
+            <include layout="@layout/snippet_viewcontacttoolbar"></include>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relLayout1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/status">
+
+                <ImageView
+                    android:id="@+id/leftImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="4"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/showWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="20dp"
+                        android:textSize="25dp"
+                        android:hint="재고를 확인하시려면 버튼을 클릭하세요"/>
+                    <Button
+                        android:id="@+id/getleft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_margin="20dp"
+                        android:text="재고확인"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/eat_not"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/showdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:textSize="45dp"/>
+                <Button
+                    android:id="@+id/bt_eat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="복용"/>
+                <devs.mulham.horizontalcalendar.HorizontalCalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/pink1"
+                    app:textColorSelected="@color/black"
+                    app:textColorNormal="@color/darkGray"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/noNut"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"/>
+            <TextView
+                android:id="@+id/say_No"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:layout_margin="20dp"
+                android:layout_below="@id/noNut"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        app:elevation="10dp"
+        app:fabSize="normal"
+        app:backgroundTint="@color/pink2"
+        android:src="@drawable/ic_add"/>
+    
+</android.support.design.widget.CoordinatorLayout>

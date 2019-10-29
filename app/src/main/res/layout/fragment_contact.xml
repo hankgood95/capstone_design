@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--toolbar를 쓰려면 꼭 Coordinator를 써야 한다.-->
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+            <include layout = "@layout/snippet_nuttoolbar"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relLayout1"
+            android:id="@+id/relLayout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:textSize="35sp"
+                android:text="영양제 이름"
+                android:textColor="@color/black"
+                android:id="@+id/tvName"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvName"
+                android:background="@drawable/tv_border">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp">
+                    <TextView
+                        android:id="@+id/full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="60dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="총 무게 : "/>
+                    <TextView
+                        android:id="@+id/one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/full"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="한정 무게 : "/>
+                    <TextView
+                        android:id="@+id/num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/one"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="개수 : "/>
+                    <TextView
+                        android:id="@+id/left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/num"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="남은 재고 : "/>
+                    <TextView
+                        android:id="@+id/full_Weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/full"
+                        android:layout_marginLeft="52dp"
+                        android:layout_marginTop="60dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="전체 무게"/>
+                    <TextView
+                        android:id="@+id/one_Weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/full_Weight"
+                        android:layout_toRightOf="@+id/one"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="한정 무게"/>
+                    <TextView
+                        android:id="@+id/real_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/one_Weight"
+                        android:layout_toRightOf="@+id/num"
+                        android:layout_marginLeft="82dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="개수"/>
+                    <TextView
+                        android:id="@+id/real_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/real_num"
+                        android:layout_toRightOf="@+id/left"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:text="남은 재고"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

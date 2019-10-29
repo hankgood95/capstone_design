@@ -1,0 +1,46 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.design.widget.AppBarLayout
+        android:layout_height = "50dp"
+        android:layout_width = "match_parent"
+        android:id="@+id/viewContactsToolbar">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="영양제 알림이"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_toLeftOf="@id/ivSetUp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/ivBt"
+                    android:src="@drawable/ic_link"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/ivSetUp"
+                    android:src="@drawable/ic_setup"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+</merge>
